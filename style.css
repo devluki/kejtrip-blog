@@ -10,6 +10,10 @@
     --font-family: 'Poppins', sans-serif;
     --primary-color: #226312;
     --gradient-primary: linear-gradient(to right, #45B649, #DCE35B);
+    /* For old browsers */
+    --gradient-primary-color--1: #DCE35B;
+    --gradient-primary-color--2: #45B649, ;
+
     --menu-active-bgc: rgb(222, 222, 222);
     --sticky-nav-bgc: rgba(222, 222, 222, 0.6);
 }
@@ -27,4 +31,112 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
+
+.nav {
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    background-image: url('./IMG/bg_pattern_green_opacity_0_15.svg');
+    background-size: 70%;
+
+}
+
+.nav__burger-container {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    z-index: 3;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.nav__links {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--menu-active-bgc);
+    background-image: url('./IMG/bg_pattern_green_opacity_0_15.svg');
+    background-size: 70%;
+    list-style: none;
+    transition: .4s;
+}
+
+.nav__links.menu--active {
+    left: 0
+}
+
+.nav__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__logo-img {
+    width: 22%;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    /* z-index: 4; */
+    transform: translateX(-50%);
+    transition: .4s;
+
+}
+
+.nav__logo-img.menu--active {
+    left: 50%;
+    width: 30%;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+
+.heading {
+    font-family: var(--headding-font-family);
+    background: var(--gradient-primary-color--1);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--gradient-primary);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.heading__bar {
+
+    background-color: var(--primary-text-color);
+    width: .8em;
+    height: .07em;
+    border-radius: 15px;
+    background: var(--gradient-primary-color--1);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--gradient-primary);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header__banner {
+    background-image: url('./IMG/mountains-6486093-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover, 60%;
+    ;
+    height: 90vh;
+
 }
