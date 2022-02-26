@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:ital,wght@0,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- End of fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Kejtrip</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="section header" id="section--0">
+            <nav class="nav">
+                <!-- TO Do -> delete -->
+                <!-- <div class="logo-container">
+                    <img class="logo link nav__logo" src="./IMG/logo-napis-green.png" alt="logo"></div> -->
+                <div class="nav__burger-container"><i class="fa-solid fa-bars"></i></div>
+                <!-- <h1>Podróż jest kobietą...</h1> -->
+                <ul class="nav__links">
+                    <!-- <li class="logo-container nav__logo-container"> -->
+                    <li class=" nav__logo-container">
+                        <img class="nav__logo-img" src="./IMG/logo-napis-green.png" alt="logo"></li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section--0"><i class="fas fa-home"></i>Home</a>
+                    </li>
+                    <!-- <li class="link">
+                        <a class="link-text" href="#section--0"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a>
+                    </li> -->
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section--1"><i class="far fa-address-card"></i> <span class="nav-text">O mnie</span></a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#section--2"><i
+                        class="fas fa-map-signs"></i> <span class="nav-text">Kierunki</span></a></li>
+
+                    <li class="nav__item"><a class="nav__link" href="#section--1"><i
+                        class="fas fa-envelope"></i> <span class="nav-text">Kontakt</span></a></li>
+                    <li class="nav__item nav__social">
+                        <a class="nav__link" href="https://www.facebook.com/KejTrip-102614665683163"><i class="fa-brands fa-facebook-square"></i></a><a class="link-text" href="#"><i class="fa-brands fa-instagram-square"></i></a><a class="link-text" href="#"><i
+                                    class="fas fa-envelope"></i></a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header__banner">
+
+            </div>
+
+        </header>
+
+        <section class="section" id=" section--1">
+            <div class="articles">
+                <div class="articles__posts-container">
+                    <div class="articles__latest-posts">
+                        <h2 class="articles__latest-posts-heading heading"><span class="heading__bar"></span>Ostatnio
+                            dodane
+                            <span class="heading__bar"></span></h2>
+                        <!-- ///// Test slider -->
+                        <div class="articles__slider-container">
+
+                            <div class="articles__slider">
+
+                                <div class="articles__slider-wrapper ">
+                                    <div class="articles__slide post">
+                                        <div class="post__img articles__slide-img--0">
+                                            <p class="post__data">2022-02-11</p>
+                                        </div>
+                                        <div class="post__text">
+                                            <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="articles__slide post">
+                                        <div class="post__img articles__slide-img--1">
+                                            <p class="post__data">2022-02-11</p>
+                                        </div>
+                                        <div class="post__text">
+                                            <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="articles__slide post">
+                                        <div class="post__img articles__slide-img--2">
+                                            <p class="post__data">2022-02-11</p>
+                                        </div>
+                                        <div class="post__text">
+                                            <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="articles__slide post">
+                                        <div class="post__img articles__slide-img--3">
+                                            <p class="post__data">2022-02-11</p>
+                                        </div>
+                                        <div class="post__text">
+                                            <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <button class="btn__slide--left btn__slide"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn__slide--right btn__slide"><i
+                                        class="fas fa-chevron-right"></i></button>
+
+                                <div class="articles__slider-dots-container">
+                                    <span class="articles__slider-dot slider__dot--active" ></span><span class="articles__slider-dot"></span><span class="articles__slider-dot"></span><span class="articles__slider-dot"></span>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                        <div class="articles__featured-posts-container">
+                            <h2 class="articles__featured-posts-heading heading">
+                                <span class="heading__bar"></span>Polecane wpisy
+                                <span class="heading__bar"></span>
+                            </h2>
+
+                            <div class="post articles__featured-post">
+                                <div class="post__img articles__featured-img--0">
+                                    <p class="post__data">2022-02-11</p>
+                                </div>
+                                <div class="post__text">
+                                    <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. </p>
+
+                                </div>
+                            </div>
+                            <div class="post articles__featured-post">
+                                <div class="post__img articles__featured-img--1">
+                                    <p class="post__data">2022-02-12</p>
+                                </div>
+                                <div class="post__text">
+
+                                    <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. </p>
+                                </div>
+                            </div>
+                            <div class="post articles__featured-post">
+                                <div class="post__img articles__featured-img--2">
+                                    <p class="post__data">2022-02-13</p>
+                                </div>
+                                <div class="post__text">
+
+                                    <p class="post__title">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. </p>
+                                </div>
+                            </div>
+                            <button class="btn articles__featured--btn">Zobacz więcej</button>
+                        </div>
+                        <!-- <button class="btn btn__more-posts">Zobacz więcej</button> -->
+                    </div>
+
+                </div>
+                <aside class="aside" id="section--1">
+
+                    <p class="aside__about-heading heading">
+                        <span class="heading__bar"></span> O mnie<span class="heading__bar"></span>
+                    </p>
+                    <!-- <img class="profile-pic" src="./IMG/Profile-2.jpg" alt="Kaśka"> -->
+                    <div class="aside__about">
+                        <div class="about__pic-container">
+
+                            <div class="about-pic"></div>
+                        </div>
+
+                        <p class="aside__txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+                            cumque
+                            architecto, atque magni, aperiam laudantium earum nobis vero saepe repudiandae quae illum
+                            placeat
+                            quos ipsum error omnis? Maiores, accusamus vero!</p>
+                        <button class="btn aside__btn--about">Więcej</button>
+
+                    </div>
+                    <!-- <button class="btn btn__about">Więcej</button> -->
+                    <!-- <p class="heading__sub heading"><span class="heading__bar"></span>Subskrypcja
+                        <span class="heading__bar"></span></p> -->
+                    <div class="aside__subscribe">
+                        <p class="aside__subscribe-heading heading"><span class="heading__bar"></span>Subskrypcja
+                            <span class="heading__bar"></span></p>
+                        <p class="aside__txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                            nulla
+                            sit
+                            fugiat officia
+                            eveniet
+                            ab dolor sed omnis cum id accusantium aut quam quis quas voluptate vitae sunt porro impedit!
+                        </p>
+                        <div class="aside__subscribe-inputs">
+                            <input class="aside__subscribe-input" placeholder="Imię" type="email" name="" id="">
+                            <input class="aside__subscribe-input" placeholder="M@il" type="email" name="" id="">
+
+                            <button class="btn aside__subscribe--btn">Subskrybuj</button>
+                        </div>
+                    </div>
+                    <!-- <p class="heading__contact heading"><span class="heading__bar"></span>Kontakt
+                        <span class="heading__bar"></span></p> -->
+                    <div class="aside__contact">
+                        <!-- <a href=""></a> -->
+                        <p class="aside__contact-heading heading"><span class="heading__bar"></span>Kontakt
+                            <span class="heading__bar"></span></p>
+                        <p class="aside__txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                            nulla
+                            sit
+                            fugiat officia
+                            eveniet
+                        </p>
+                        <div class="aside__contact-social-container">
+
+                            <ul class="aside__contact-links">
+                                <li><a class="aside__contact-link" href="#"><i
+                                    class="fa-brands fa-facebook-square"></i></a></li>
+                                <li><a class="aside__contact-link" href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                                </li>
+                                <li><a class="aside__contact-link" href="#"><i
+                                    class="fas fa-envelope"></i></a></li>
+                            </ul>
+
+
+
+                        </div>
+                </aside>
+            </div>
+        </section>
+        <section class="section map">
+            <div class="destinations__map" id="section--2">
+                <h3 class="heading destinations__map-heading"><span class="heading__bar"></span>Kierunki<i
+                        class="fas fa-map-signs"></i>
+                    <span class="heading__bar"></span>
+                </h3>
+                <div class="destinations__map-conteiner">
+                    <!-- <div class="map__search"></div> -->
+                    <div id="map"></div>
+                </div>
+                <div class="destinations__motivation">
+
+                    <div class="destinations__motivation-quote-container">
+                        <p class="destinations__motivation-quote">Najważniejsze w życiu jest nie to, co posiadamy, lecz
+                            kogo
+                            spotykamy.
+                        </p>
+                        <p class="destinations__motivation-author">J. M. Lawrence</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer__links-container">
+                    <p class="footer__social-heading heading"><span class="heading__bar"></span>Social media
+                        <span class="heading__bar"></span></p>
+                    <ul class="footer__links">
+                        <li><a class="footer__link" href="#"><i
+                        class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a class="footer__link" href="#"><i class="fa-brands fa-instagram-square"></i></a></li>
+                        <li><a class="footer__link" href="#"><i
+                        class="fas fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+        </section>
+        </footer>
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

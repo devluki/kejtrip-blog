@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --headding-font-family: 'Fasthand', cursive, sans-serif;
+    --font-family: 'Poppins', sans-serif;
+    --primary-color: #226312;
+    --gradient-primary: linear-gradient(to right, #45B649, #DCE35B);
+    --menu-active-bgc: rgb(222, 222, 222);
+    --sticky-nav-bgc: rgba(222, 222, 222, 0.6);
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
