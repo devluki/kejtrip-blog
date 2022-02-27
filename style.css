@@ -136,7 +136,7 @@
     align-items: center;
     font-size: 2.5em;
     width: 100vw;
-    font-family: var(--headding-font-family);
+    /* font-family: var(--headding-font-family);
 
     background: var(--gradient-primary-color--1);
 
@@ -145,9 +145,15 @@
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 
     /* TO DO IOS gradient */
+
+    font-size: 48px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 
