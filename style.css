@@ -136,12 +136,12 @@
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
 
-    /* Chrome 10-25, Safari 5.1-6 */
+    -webkit-text-fill-color: transparent;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 
 
     display: flex;
