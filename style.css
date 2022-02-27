@@ -42,6 +42,13 @@
 
 }
 
+.sticky {
+    position: fixed;
+    z-index: 4;
+    background-color: rgba(222, 222, 222, 0.6);
+    left: 0;
+}
+
 .nav__burger-container {
     position: absolute;
     top: 25%;
@@ -86,12 +93,12 @@
 }
 
 .nav__logo-img {
-    width: 22%;
+    width: 20%;
     position: absolute;
     top: 0;
     left: -50%;
     /* z-index: 4; */
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(-25deg);
     transition: .4s;
 
 }
@@ -123,6 +130,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 2.5em;
+    width: 100%;
 }
 
 .heading__bar {
@@ -300,4 +308,104 @@
 
 .articles__featured-post {
     height: 70vh
+}
+
+.btn {
+
+
+    background-color: var(--primary-color);
+    border: none;
+    margin: 4% 0 5% 0;
+    font-family: var(--font-family);
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 5px 10px;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(54, 31, 84, .4);
+    min-width: 40%;
+    margin: 5% auto;
+
+
+}
+
+
+/* aside */
+.aside {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.aside__about,
+.aside__subscribe,
+.aside__contact,
+.aside__subscribe-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.about-pic {
+    background-image: url('./IMG/Profile-3jpg.jpg');
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    width: 45vw;
+}
+
+.about-pic::before {
+    display: block;
+    content: '';
+    padding: 50% 0;
+
+}
+
+
+.aside__txt {
+    padding: 5% 10%;
+    text-align: justify;
+}
+
+.aside__subscribe-input {
+    margin: 5% 0;
+}
+
+.aside__contact-social-container {
+    width: 80%;
+}
+
+.aside__contact-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.aside__contact-link {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--primary-color)
+}
+
+#map {
+    height: 50vh;
+    width: 100%;
+}
+
+.destinations__motivation {
+    padding: 5% 10%;
+}
+
+
+.footer {
+    height: 10vh;
+    background-color: pink;
 }
