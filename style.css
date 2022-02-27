@@ -81,6 +81,19 @@
     transition: .4s;
 }
 
+.nav__link {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.nav__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
 .nav__links.menu--active {
     left: 0;
     position: fixed;
@@ -407,5 +420,24 @@
 
 .footer {
     height: 10vh;
-    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.footer__social-heading {
+    font-size: 1em;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2% 0;
+
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--primary-color)
 }
