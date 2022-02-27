@@ -147,12 +147,12 @@
     background-clip: text;
     -webkit-text-fill-color: transparent; */
 
-    display: block;
+    /* display: block; */
     height: contain;
     max-width: max-content !important;
     font-size: 63px;
     font-weight: 900;
-    background: var(--gradient);
+    background: var(--gradient-primary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
