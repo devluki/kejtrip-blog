@@ -126,3 +126,55 @@ L.marker([9.976416, -83.85344], {
 L.marker([8.976416, -73.85344], {
     icon: pinkIcon
 }).addTo(map).bindPopup("<b>Kostaryka</b><br>brvolcán irazú</br><br>").closePopup();
+
+
+// Random quote gnerator
+
+const motivationQuote = [{
+    quote: 'Jeśli myślisz, że przygody bywają niebezpieczne, spróbuj rutyny. Ona jest śmiercionośna.',
+    author: 'Paulo Coelho'
+}, {
+    quote: 'Turyści nie wiedzą gdzie byli, podróżnicy nie wiedzą gdzie będą.',
+    author: 'Paul Theroux'
+}, {
+    quote: 'Życie albo jest śmiałą przygodą, albo niczym.',
+    author: 'Helen Keller'
+}, {
+    quote: 'Przygoda warta jest każdego trudu.',
+    author: 'Arystoteles'
+}, {
+    quote: 'Za dwadzieścia lat bardziej będziesz żałował tego czego nie zrobiłeś, niż tego co zrobiłeś. Więc odwiąż liny, opuść bezpieczną przystań. Złap w żagle pomyślne wiatry. Podróżuj. Śnij. Odkrywaj.',
+    author: 'Mark Twain'
+}, {
+    quote: 'Najważniejsze w życiu jest nie to, co posiadamy, lecz kogo spotykamy.',
+    author: 'J. M. Lawrence'
+}];
+
+
+
+
+const markupParentEl = document.querySelector('.destinations__motivation-quote-container');
+
+let quote = '';
+
+const randomNumberGenerator = function (min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+const randomQuoteGenerator = function () {
+    markupParentEl.innerHTML = '';
+
+    const quoteIndex = randomNumberGenerator(0, motivationQuote.length);
+    quote = motivationQuote[quoteIndex]
+    const markup = `
+        <p class="motivation__quote">${quote.quote}</p>
+    <p class="motivation__quote-author">${quote.author}</p>
+    `;
+
+    console.log(markup);
+
+    markupParentEl.insertAdjacentHTML('afterbegin', markup);
+}
+
+
+setInterval(randomQuoteGenerator, 5000)

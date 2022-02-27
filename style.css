@@ -7,7 +7,7 @@
 
 :root {
     --headding-font-family: 'Fasthand', cursive, sans-serif;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Poppins', arial, sans-serif;
     --primary-color: #226312;
     --gradient-primary: linear-gradient(to right, #45B649, #DCE35B);
     /* For old browsers */
@@ -414,9 +414,25 @@
 }
 
 .destinations__motivation {
-    padding: 5% 10%;
+    padding: 5% 6%;
+    text-align: justify;
+
 }
 
+.destinations__motivation-quote-container {
+    width: 100vw;
+    min-height: 20vh;
+
+}
+
+.motivation__quote {
+    width: 80%;
+}
+
+.motivation__quote-author {
+    width: 80%;
+    text-align: right;
+}
 
 .footer {
     height: 10vh;
