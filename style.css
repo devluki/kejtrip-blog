@@ -140,6 +140,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     display: flex;
     justify-content: space-around;
     align-items: center;
