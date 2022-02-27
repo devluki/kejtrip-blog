@@ -31,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    font-family: var(--font-family);
 }
 
 .nav {
@@ -414,23 +415,30 @@
 }
 
 .destinations__motivation {
-    padding: 5% 6%;
+    width: 100vw;
+
     text-align: justify;
+    background-image: url('./IMG/bg_pattern_green_opacity_0_15.svg');
+    background-size: 80%;
+
 
 }
 
 .destinations__motivation-quote-container {
-    width: 100vw;
-    min-height: 20vh;
+    width: 100%;
+    height: 40vh;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 
 }
 
-.motivation__quote {
-    width: 80%;
-}
+
 
 .motivation__quote-author {
-    width: 80%;
+    font-family: var(--headding-font-family);
     text-align: right;
 }
 
@@ -456,4 +464,15 @@
 .footer__link {
     text-decoration: none;
     color: var(--primary-color)
+}
+
+@media (orientation:portrait) and (min-width:375px) {
+    .heading {
+
+        font-weight: 100;
+    }
+
+    .motivation__quote-author {
+        font-size: 1.5em;
+    }
 }
