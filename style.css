@@ -146,7 +146,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    /* IOS TO DO */
+    color: var(--primary-color)
 }
 
 
