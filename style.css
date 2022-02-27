@@ -135,11 +135,12 @@
 
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: var(--gradient-primary);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
