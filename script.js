@@ -14,14 +14,15 @@ const header = document.querySelector('.header')
 // Map Z-index
 const maps = document.getElementById('map')
 
-
+// Z-index of map
+maps.style.zIndex = 1;
 
 
 burger.addEventListener('click', function () {
     [burger, navLinks, navLogo].forEach(item => item.classList.toggle('menu--active'))
     console.log('click');
     // Z-index of map -> hide under mobile menu!
-    maps.style.zIndex = 1;
+
 })
 
 
