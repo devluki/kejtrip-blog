@@ -16,6 +16,8 @@
 
     --menu-active-bgc: rgb(222, 222, 222);
     --sticky-nav-bgc: rgba(222, 222, 222, 0.6);
+
+    --aside-border--color: rgba(222, 222, 222, 0.6);
 }
 
 
@@ -837,7 +839,7 @@
     .aside {
         max-width: 30%;
         height: 100%;
-        border-left: .05em solid var(--primary-color);
+        border-left: .05em solid var(--aside-border--color);
     }
 
     .articles__slider-wrapper {
@@ -848,6 +850,7 @@
     .articles__slider-wrapper,
     .articles__featured-posts-container {
         height: 45vh;
+
         ;
     }
 
@@ -884,5 +887,12 @@
         max-width: 50%;
     }
 
+    .nav__logo-container {
+        max-width: 10%;
+    }
+
+    .nav__logo-img {
+        width: 50%;
+    }
 
 }
