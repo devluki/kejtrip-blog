@@ -21,9 +21,33 @@ maps.style.zIndex = 1;
 burger.addEventListener('click', function () {
     [burger, navLinks, navLogo].forEach(item => item.classList.toggle('menu--active'))
     console.log('click');
-    // Z-index of map -> hide under mobile menu!
 
 })
+
+
+// Smooth scrolling
+
+const smoothScroll = function (id) {
+    document.querySelector(id).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+navLinks.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains('nav__link')) {
+        const id = e.target.getAttribute('href');
+
+        smoothScroll(id);
+    };
+
+    if (e.target.classList.contains('nav-icon')) {
+        const id = e.target.parentElement.getAttribute('href');
+        smoothScroll(id);
+    };
+});
+
 
 
 
@@ -172,7 +196,7 @@ const randomQuoteGenerator = function () {
     <p class="motivation__quote-author">${quote.author}</p>
     `;
 
-    console.log(markup);
+    // console.log(markup);
 
     markupParentEl.insertAdjacentHTML('afterbegin', markup);
 }
