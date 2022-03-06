@@ -5,6 +5,7 @@ const navLinks = document.querySelectorAll('.nav__link');
 const navLogo = document.querySelector('.nav__logo-img');
 // Slider constraints
 const slides = document.querySelectorAll('.articles__slide');
+
 const arrowLeft = document.querySelector('.btn__slide--left');
 const arrowRight = document.querySelector('.btn__slide--right');
 const dots = document.querySelectorAll('.articles__slider-dot')
@@ -67,7 +68,7 @@ navLinksContainer.addEventListener('click', function (e) {
 
 
 // Slider
-
+// Basic function to organize slider layout and change slides
 const slidePosition = function () {
     slides.forEach((slide, i) => slide.style.transform = `translateX(${(index - i)*150-50}%)`)
 
@@ -77,60 +78,63 @@ const slidePosition = function () {
 
 slidePosition();
 
-arrowRight.addEventListener('click', function () {
 
+
+const moveSlideRight = function () {
     if (index === slides.length - 1) return
     index++
     slidePosition()
 
     console.log('click right', index);
-
-
-})
-
-arrowLeft.addEventListener('click', function () {
+}
+const moveSlideLeft = function () {
     if (index === 0) return
     index--;
     slidePosition();
 
     console.log('click left', index);
-})
+}
+
+
+// Swipe posts
+
+let initialX = null;
+let initialY = null;
+
+const startTouch = function (e) {
+    initialX = e.touches[0].clientX;
+    initialY = e.touches[0].clientY;
+};
+
+function moveTouch(e) {
+    if (initialX === null || initialY === null) return;
+
+    let currentX = e.touches[0].clientX;
+    let currentY = e.touches[0].clientY;
+    let diffX = initialX - currentX;
+    let diffY = initialY - currentY;
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        diffX > 0 ? moveSlideLeft() : moveSlideRight();
+
+
+    }
+    initialX = initialY = null;
+    e.preventDefault();
+};
+
+
+slides.forEach(slide => {
+    slide.addEventListener('touchstart', startTouch, false);
+    slide.addEventListener('touchmove', moveTouch, false);
+});
+
+arrowRight.addEventListener('click', moveSlideRight);
+arrowLeft.addEventListener('click', moveSlideLeft);
 
 dots.forEach((dot, i) => dot.addEventListener('click', function () {
     index = i;
     slidePosition();
-}))
-// Test for SWIPE NAV
-let initX = null;
-let initY = null
-
-const stratSwipe = function (e) {
-    initX = e.touches[0].clientX;
-    initX = e.touches[0].clientY;
-
-}
-
-// function moveTouch(e) {
-//     if (initialX === null || initialY === null) return;
-
-
-//     let curX = e.touches[0].clientX;
-//     let curY = e.touches[0].clientY;
-//     let diffX = initialX - curX;
-//     let diffY = initialY - curY;
-//     if (Math.abs(diffX) > Math.abs(diffY)) {
-//         if (diffX > 0) { // swiped left
-//             moveToSlide(currentSlide + 1); // hooking up our next slide function
-//             console.log('l');
-//         } else { // swiped right
-//             moveToSlide(currentSlide + -1); // hooking up our prev slide function
-//             console.log('r');
-//         }
-//     }
-//     initialX = null;
-//     initialY = null;
-//     e.preventDefault();
-// };
+}));
 
 
 //Sticky navigation -> OBSERVER API
