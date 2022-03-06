@@ -28,7 +28,12 @@ const burgerMenuToggle = function () {
 
 
 // Event listeners
-navLinks.forEach(navLink => navLink.addEventListener('click', burgerMenuToggle))
+navLinks.forEach(navLink => navLink.addEventListener('click', function () {
+    if (window.innerWidth > 1024) return
+    burgerMenuToggle()
+
+
+}))
 burger.addEventListener('click', burgerMenuToggle);
 
 
