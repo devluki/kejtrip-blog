@@ -136,6 +136,10 @@ dots.forEach((dot, i) => dot.addEventListener('click', function () {
     slidePosition();
 }));
 
+// TO DO INFINITE SLIDER??
+
+
+
 
 //Sticky navigation -> OBSERVER API
 

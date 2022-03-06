@@ -40,7 +40,7 @@
 
 .nav {
     position: relative;
-    height: 10vh;
+    height: var(--nav-height);
     width: 100vw;
     background-image: url('./IMG/bg_pattern_green_opacity_0_15.svg');
     background-size: 70%;
