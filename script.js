@@ -31,8 +31,6 @@ const burgerMenuToggle = function () {
 navLinks.forEach(navLink => navLink.addEventListener('click', function () {
     if (window.innerWidth > 1024) return
     burgerMenuToggle()
-
-
 }))
 burger.addEventListener('click', burgerMenuToggle);
 
@@ -102,6 +100,37 @@ dots.forEach((dot, i) => dot.addEventListener('click', function () {
     index = i;
     slidePosition();
 }))
+// Test for SWIPE NAV
+let initX = null;
+let initY = null
+
+const stratSwipe = function (e) {
+    initX = e.touches[0].clientX;
+    initX = e.touches[0].clientY;
+
+}
+
+// function moveTouch(e) {
+//     if (initialX === null || initialY === null) return;
+
+
+//     let curX = e.touches[0].clientX;
+//     let curY = e.touches[0].clientY;
+//     let diffX = initialX - curX;
+//     let diffY = initialY - curY;
+//     if (Math.abs(diffX) > Math.abs(diffY)) {
+//         if (diffX > 0) { // swiped left
+//             moveToSlide(currentSlide + 1); // hooking up our next slide function
+//             console.log('l');
+//         } else { // swiped right
+//             moveToSlide(currentSlide + -1); // hooking up our prev slide function
+//             console.log('r');
+//         }
+//     }
+//     initialX = null;
+//     initialY = null;
+//     e.preventDefault();
+// };
 
 
 //Sticky navigation -> OBSERVER API
