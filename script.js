@@ -1,6 +1,7 @@
 // Burger menu for mobile view
 const burger = document.querySelector('.nav__burger-container');
-const navLinks = document.querySelector('.nav__links');
+const navLinksContainer = document.querySelector('.nav__links');
+const navLinks = document.querySelectorAll('.nav__link');
 const navLogo = document.querySelector('.nav__logo-img');
 // Slider constraints
 const slides = document.querySelectorAll('.articles__slide');
@@ -17,12 +18,21 @@ const maps = document.getElementById('map')
 // Z-index of map
 maps.style.zIndex = 1;
 
+// Mobile menu
 
-burger.addEventListener('click', function () {
-    [burger, navLinks, navLogo].forEach(item => item.classList.toggle('menu--active'))
+// Toogle class on mobile menu elementys
+const burgerMenuToggle = function () {
+    [burger, navLinksContainer, navLogo].forEach(item => item.classList.toggle('menu--active'))
     console.log('click');
+}
 
-})
+
+// Event listeners
+navLinks.forEach(navLink => navLink.addEventListener('click', burgerMenuToggle))
+burger.addEventListener('click', burgerMenuToggle);
+
+
+
 
 
 // Smooth scrolling
@@ -33,8 +43,10 @@ const smoothScroll = function (id) {
     });
 }
 
-navLinks.addEventListener('click', function (e) {
+navLinksContainer.addEventListener('click', function (e) {
     e.preventDefault();
+
+
 
     if (e.target.classList.contains('nav__link')) {
         const id = e.target.getAttribute('href');
@@ -89,13 +101,11 @@ dots.forEach((dot, i) => dot.addEventListener('click', function () {
 
 //Sticky navigation -> OBSERVER API
 
-// const header = document.querySelector('.section__header');
-// const nav = document.querySelector('.navigation__container')
 const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
     const [entry] = entries;
-    // console.log(entry);
+
 
     if (!entry.isIntersecting) nav.classList.add('sticky');
     else nav.classList.remove('sticky');
@@ -108,10 +118,10 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+
 // Leaflet
 // map ------------------
-
-
 
 var map = L.map('map', {
 
@@ -174,8 +184,6 @@ const motivationQuote = [{
     quote: 'Najważniejsze w życiu jest nie to, co posiadamy, lecz kogo spotykamy.',
     author: 'J. M. Lawrence'
 }];
-
-
 
 
 const markupParentEl = document.querySelector('.destinations__motivation-quote-container');
