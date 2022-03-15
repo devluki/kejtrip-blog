@@ -145,23 +145,32 @@
     width: 100%;
     font-family: var(--headding-font-family);
 
-    background: var(--gradient-primary-color--1);
+    /* background: var(--gradient-primary-color--1);
 
     background: -webkit-linear-gradient(to right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
 
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* test */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    /* TO DO IOS gradient */
+    -webkit-text-fill-color: transparent; */
 
-    box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.5);
+    background: #ffad26;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffad26 0%, #fea026 50%, #ff8b00 51%, #ff7701 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffad26), color-stop(50%, #fea026), color-stop(51%, #ff8b00), color-stop(100%, #ff7701));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffad26 0%, #fea026 50%, #ff8b00 51%, #ff7701 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffad26 0%, #fea026 50%, #ff8b00 51%, #ff7701 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffad26 0%, #fea026 50%, #ff8b00 51%, #ff7701 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ffad26 0%, #fea026 50%, #ff8b00 51%, #ff7701 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffad26', endColorstr='#ff7701', GradientType=0);
+    /* IE6-9 */
+
 
 }
 
