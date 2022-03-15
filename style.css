@@ -161,7 +161,7 @@
     -moz-text-fill-color: transparent;
     /* TO DO IOS gradient */
 
-
+    box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.5);
 
 }
 
