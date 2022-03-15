@@ -111,14 +111,16 @@
 }
 
 .nav__logo-img {
-    width: 20%;
+
+
     position: absolute;
     top: 0;
     left: -50%;
     /* z-index: 4; */
     transform: translateX(-50%) rotate(-25deg);
     transition: .4s;
-
+    max-width: 100%;
+    max-height: var(--nav-height);
 }
 
 .nav__logo-img.menu--active {
