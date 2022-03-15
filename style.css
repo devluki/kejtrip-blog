@@ -170,6 +170,7 @@
     color: transparent;
     -webkit-background-clip: text; */
     background: -webkit-linear-gradient(#eee, #333);
+    background: linear-gradient(#eee, #333);
 
     clip: text;
     background-clip: text;
