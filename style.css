@@ -119,14 +119,26 @@
     /* z-index: 4; */
     transform: translateX(-50%) rotate(-25deg);
     transition: .4s;
+    /* max-width: 100%; */
+    max-height: var(--nav-height);
+
+}
+
+/* 
+.nav__logo-img,
+.nav__logo-img.menu--active {
+
     max-width: 100%;
     max-height: var(--nav-height);
-}
+} */
+
 
 .nav__logo-img.menu--active {
     left: 50%;
     width: 30%;
     position: fixed;
+    max-width: 100%;
+    max-height: 50%;
     /* transform: rotate(-25deg); */
 }
 
@@ -145,16 +157,21 @@
     width: 100%;
     font-family: var(--headding-font-family);
 
-    background: var(--gradient-primary-color--1);
+    /* background: var(--gradient-primary-color--1);
 
     background: -webkit-linear-gradient(right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
 
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    /* background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text; */
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-
 }
 
 
@@ -544,19 +561,19 @@
 
     }
 
-    .nav__logo-img.menu--active {
+    /* .nav__logo-img.menu--active {
 
         width: 25%;
 
-    }
+    } */
 }
 
 /* 540 */
 @media (orientation:portrait) and (min-width:540px) {
 
-    .nav__logo-img {
+    /* .nav__logo-img {
         width: 15%;
-    }
+    } */
 
     .nav__burger-container {
 
@@ -569,11 +586,11 @@
 
     }
 
-    .nav__logo-img.menu--active {
+    /* .nav__logo-img.menu--active {
 
         width: 20%;
 
-    }
+    } */
 
     .heading {
 
@@ -660,9 +677,9 @@
 /* @media (orientation:portrait) and (min-width:820px) { */
 @media (orientation:portrait) and (min-width:768px) {
 
-    .nav__logo-img {
+    /* .nav__logo-img {
         width: 15%;
-    }
+    } */
 
     .nav__burger-container {
 
@@ -675,11 +692,11 @@
 
     }
 
-    .nav__logo-img.menu--active {
+    /* .nav__logo-img.menu--active {
 
         width: 20%;
 
-    }
+    } */
 
     .heading {
 
@@ -844,7 +861,7 @@
     }
 
     .nav__logo-img {
-        width: 50%;
+        /* width: 50%; */
         position: relative;
         left: 0;
     }
