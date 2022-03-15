@@ -137,8 +137,8 @@
     left: 50%;
     /* width: 30%; */
     position: fixed;
-    max-width: calc(2*var(--nav-height));
-    max-height: calc(2*var(--nav-height))
+    max-width: calc(1.5*var(--nav-height));
+    max-height: calc(1.5*var(--nav-height))
         /* transform: rotate(-25deg); */
 }
 
