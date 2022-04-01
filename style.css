@@ -168,6 +168,16 @@
 
 }
 
+.heading-text {
+    background: var(--gradient-primary-color--1);
+
+    background: -webkit-linear-gradient(right, var(--gradient-primary-color--2), var(--gradient-primary-color--1));
+
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 .heading__bar {
