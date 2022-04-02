@@ -1,3 +1,3 @@
 # Kejtrip-blog project
 
-Solo female travel blog.
+Frondend blog HTML, CSS, JavaScript
