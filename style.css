@@ -36,7 +36,7 @@
     align-items: center;
     overflow: hidden;
     font-family: var(--font-family);
-    background-color: #FEFEFE;
+    background-color: #EFF0EB;
 }
 
 .nav {
@@ -154,8 +154,9 @@
     text-decoration: none;
 }
 
+
 .blur {
-    filter: blur(2px);
+    filter: blur(1.5px);
 }
 
 .heading {

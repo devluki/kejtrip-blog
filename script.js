@@ -2,6 +2,7 @@
 const burger = document.querySelector('.nav__burger-container');
 const navLinksContainer = document.querySelector('.nav__links');
 const navLinks = document.querySelectorAll('.nav__link');
+const navIcons = document.querySelectorAll('.nav-icon')
 const navLogo = document.querySelector('.nav__logo-img');
 // Slider constraints
 const slides = document.querySelectorAll('.articles__slide');
@@ -67,23 +68,32 @@ navLinksContainer.addEventListener('click', function (e) {
 });
 
 // Hoover/blur - navlinks
-
+// 
+// || 
 const blurLinksOnHoover = function (event) {
     navLinks.forEach(navlink => navlink.addEventListener(`${event}`, function (e) {
-        if (!e.target.classList.contains('nav__link') || e.target.classList.contains('nav-icon')) return
-        navLinks.forEach(navlink => navlink.classList.add('blur'));
-        if (event === 'mouseenter') {
-            e.target.classList.toggle('blur')
+
+        if (event === 'mouseover' && (e.target.classList.contains('nav__link') || e.target.classList.contains('nav-icon'))) {
+            navLinks.forEach(navlink => {
+                navlink.classList.add('blur');
+            });
+
+            e.target.classList.remove('blur')
+            e.target.parentElement.classList.remove('blur')
+
         }
         if (event === 'mouseout') {
-            navLinks.forEach(navlink => navlink.classList.remove('blur'));
+            navLinks.forEach(navlink => {
+                navlink.classList.remove('blur')
+            });
+
         }
         // console.log('link hoverd:', e.target);
     }))
 }
 
 
-blurLinksOnHoover('mouseenter');
+blurLinksOnHoover('mouseover');
 blurLinksOnHoover('mouseout');
 
 // Slider
@@ -185,6 +195,9 @@ headerObserver.observe(header);
 // Leaflet
 // map ------------------
 
+
+
+
 var map = L.map('map', {
 
     dragging: window.innerWidth < 1024 ? false : true,
@@ -197,7 +210,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     minZoom: 3,
-    id: 'mapbox/streets-v11',
+    id: 'mapbox/light-v9',
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'your.mapbox.access.token'
@@ -223,6 +236,8 @@ L.marker([9.976416, -83.85344], {
 L.marker([8.976416, -73.85344], {
     icon: pinkIcon
 }).addTo(map).bindPopup("<b>Kostaryka</b><br>brvolcán irazú</br><br>").closePopup();
+
+
 
 
 // Random quote gnerator
