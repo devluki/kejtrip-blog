@@ -116,14 +116,14 @@
 }
 
 .nav__logo-img {
-
+    transform: translateX(-50%) rotate(-25deg);
 
     position: absolute;
     top: 0;
     left: -50%;
     /* z-index: 4; */
     /* transform: translateX(-50%) rotate(-25deg); */
-    transform: translateX(-50%) rotate(-25deg);
+
     transition: .4s;
     max-width: var(--nav-height);
     max-height: var(--nav-height);
@@ -140,8 +140,9 @@
 
 
 .nav__logo-img.menu--active {
-    left: 50%;
     transform: translateX(-50%) rotate(-385deg);
+    left: 50%;
+
 
 
     position: fixed;
