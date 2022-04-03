@@ -616,6 +616,9 @@
     width: 100%;
 }
 
+.emoticon {
+    color: var(--primary-color);
+}
 
 
 
@@ -708,6 +711,13 @@
         display: none;
     }
 
+    .nav,
+    .footer {
+
+        background-size: 100%;
+
+    }
+
 }
 
 @media (orientation:portrait) and (min-width:375px) {
@@ -722,6 +732,8 @@
         font-size: 1.5em;
 
     }
+
+
 
     /* .nav__logo-img.menu--active {
 
@@ -829,6 +841,13 @@
     .motivation__quote-author,
     .motivation__quote {
         font-size: 1.2em;
+    }
+
+    .nav,
+    .footer {
+
+        background-size: 70%;
+
     }
 
 
@@ -953,12 +972,22 @@
         font-size: 2em;
     }
 
+    .nav,
+    .footer {
+
+        background-size: 60%;
+
+    }
 
 
 }
 
 @media (orientation:portrait) and (min-width:820px) {
+    .nav {
 
+        background-size: 45%;
+
+    }
 
     .post {
         width: 50%;
@@ -1007,7 +1036,7 @@
 
     .nav {
         height: var(--nav-height);
-        background-size: 15%;
+        background-size: 22%;
 
     }
 
@@ -1166,16 +1195,19 @@
     }
 
     .footer {
-        /* height: var(--nav-height); */
+
         width: 100%;
-        background-size: 15%;
+
     }
 
     .footer__content-question {
         margin: 1% 0%;
     }
 
-    /* .footer__content-text {
-        margin: 1% 0%;
-    } */
+    .nav,
+    .footer {
+
+        background-size: 28%;
+
+    }
 }
