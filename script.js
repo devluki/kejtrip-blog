@@ -52,7 +52,7 @@ const smoothScroll = function (id) {
 
 navLinksContainer.addEventListener('click', function (e) {
     e.preventDefault();
-
+    // setAttribute();
 
 
     if (e.target.classList.contains('nav__link')) {
@@ -66,6 +66,8 @@ navLinksContainer.addEventListener('click', function (e) {
         smoothScroll(id);
     };
 });
+
+
 
 // Hoover/blur - navlinks
 // 

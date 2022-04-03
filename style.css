@@ -254,7 +254,7 @@
 }
 
 .header__motivation-quote-container {
-    margin-bottom: var(--nav-height);
+    margin-bottom: calc(.35 * var(--nav-height));
     max-width: 1000px;
 }
 
@@ -273,14 +273,16 @@
     width: 100%
 }
 
-#section--1,
+/* #section--1, */
 #section--3,
-#section--2 {
+#section--2,
+.articles__posts-container,
+.aside {
     padding-top: 10vh;
 }
 
 .motivation__quote-author {
-    margin-top: 3%;
+    margin-top: 2%;
     font-family: var(--headding-font-family);
     text-align: right;
     animation: fade infinite 6s;
