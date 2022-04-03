@@ -158,6 +158,8 @@
 
 .blur {
     filter: blur(1.5px);
+    opacity: .7;
+    transition: .2s;
 }
 
 .heading {
@@ -215,7 +217,7 @@
     align-items: center;
     justify-content: space-around;
     /* align-content: space-between; */
-    background-image: url('./IMG/mountains-6486093-2.jpg');
+    background-image: url('./IMG/Hero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover, 60%;
@@ -251,10 +253,17 @@
 
 }
 
+.header__motivation-quote-container {
+    margin-bottom: var(--nav-height);
+    max-width: 1000px;
+}
+
+
 .header__motivation-quote {
     text-align: justify;
     font-style: italic;
     animation: fade infinite 6s;
+
 }
 
 
@@ -271,9 +280,11 @@
 }
 
 .motivation__quote-author {
+    margin-top: 3%;
     font-family: var(--headding-font-family);
     text-align: right;
     animation: fade infinite 6s;
+    transform: rotate(-5deg);
 }
 
 .author-link {
@@ -612,6 +623,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--sticky-nav-bgc);
     background-image: url('./IMG/bg_pattern_green_opacity_0_15.svg');
     background-size: 75%;
@@ -647,6 +659,13 @@
     list-style: none;
 
 
+
+}
+
+.footer__links-container {
+    width: 100%;
+    max-width: 500px;
+
 }
 
 .footer__link {
@@ -659,6 +678,7 @@
 .footer__author-container {
     text-align: center;
     background-color: black;
+    width: 100%;
 }
 
 .author-link {
@@ -1027,6 +1047,10 @@
         font-size: 1.3em;
     }
 
+    .motivation__quote-author {
+        font-size: 1.5em;
+    }
+
     /* .header__welcome #section--1 {
         height: 170vh;
     } */
@@ -1105,8 +1129,8 @@
 
     #map {
 
-        width: 55%;
-        height: 40vh;
+        width: 80%;
+        height: 60vh;
     }
 
     #section--1 {

@@ -195,9 +195,6 @@ headerObserver.observe(header);
 // Leaflet
 // map ------------------
 
-
-
-
 var map = L.map('map', {
 
     dragging: window.innerWidth < 1024 ? false : true,
@@ -220,6 +217,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // Pin - icon
 
 var pinkIcon = L.icon({
+    iconUrl: './IMG/pin2.png',
+    iconSize: [40, 60],
+    iconAnchor: [20, 60],
+});
+
+var greenIcon = L.icon({
     iconUrl: './IMG/pin.png',
     // shadowUrl: 'leaf-shadow.png',
 
@@ -230,14 +233,12 @@ var pinkIcon = L.icon({
     // popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([9.976416, -83.85344], {
-    icon: pinkIcon
+    icon: greenIcon
 }).addTo(map).bindPopup("<b>Kostaryka</b><br>brvolcán irazú</br><br><biutton class='btn'>Zobacz więcej</button>").closePopup();
 
 L.marker([8.976416, -73.85344], {
     icon: pinkIcon
 }).addTo(map).bindPopup("<b>Kostaryka</b><br>brvolcán irazú</br><br>").closePopup();
-
-
 
 
 // Random quote gnerator
@@ -262,6 +263,10 @@ const motivationQuote = [{
     {
         quote: '"Jeśli naszym przeznaczeniem byłoby być w jednym miejscu, mielibyśmy korzenie zamiast stóp."',
         author: 'Rachel Wolchin'
+    },
+    {
+        quote: '"Za dwadzieścia lat bardziej będziesz żałował tego czego nie zrobiłeś, niż tego co zrobiłeś. Więc odwiąż liny, opuść bezpieczną przystań. Złap w żagle pomyślne wiatry. Podróżuj. Śnij. Odkrywaj."',
+        author: 'Mark Twain'
     },
 
 ];
