@@ -57,7 +57,7 @@
 
 .nav__burger-container {
     position: absolute;
-    top: 25%;
+    top: 14%;
     right: 10%;
     z-index: 3;
     color: var(--primary-color);
@@ -682,6 +682,10 @@
     .aside__subscribe-heading {
         padding-top: 10vh;
 
+    }
+
+    .btn__slide {
+        display: none;
     }
 
 }
