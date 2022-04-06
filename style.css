@@ -1106,15 +1106,15 @@
 
     }
 
-    .articles__slider-wrapper,
+    /* .articles__slider-wrapper,
     .articles__featured-posts-container {
-        /* height: 60%; */
+        
 
         min-height: 400px;
         height: 55vh;
 
         ;
-    }
+    } */
 
     .articles__posts-container {
         flex-grow: 3;
@@ -1129,7 +1129,7 @@
 
     .post {
         width: 30%;
-        height: 80%;
+        height: 55vh;
     }
 
     .map {
@@ -1164,11 +1164,11 @@
         height: 60vh;
     }
 
-    #section--1 {
+    /* #section--1 {
         min-height: 1200px;
         height: 160vh;
 
-    }
+    } */
 
 
 

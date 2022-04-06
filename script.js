@@ -270,6 +270,14 @@ const motivationQuote = [{
         quote: '"Za dwadzieścia lat bardziej będziesz żałował tego czego nie zrobiłeś, niż tego co zrobiłeś. Więc odwiąż liny, opuść bezpieczną przystań. Złap w żagle pomyślne wiatry. Podróżuj. Śnij. Odkrywaj."',
         author: 'Mark Twain'
     },
+    {
+        quote: '"Nie wszyscy ci, którzy wędrują, są pogubieni."',
+        author: 'JRR Tolkien'
+    },
+    {
+        quote: '"Inwestycja w podróże to inwestycja w siebie"',
+        author: 'Matthew Karsten'
+    },
 
 ];
 
