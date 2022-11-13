@@ -1,3 +1,2 @@
-# Kejtrip-blog project
+# Kejtrip-blog project website 
 
-Frondend blog HTML, CSS, JavaScript.
